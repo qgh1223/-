@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#answer").click(function(){
+                var question=$("#question").val();
+                $.get('/getanswer',{'question':question},function(ret){
+                    $("#result").html(ret)
+                })
+            });
+            $("#humananswer").onclick(function(){
+                var question=$("#question").val();
+                $.get('/humananswer',{'question':question},function(ret){
+
+                })
+            });
+        })
+    </script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>请输入问题:</td>
+        <td><input type="text" name="question" id='question'/></td>
+    </tr>
+    <tr>
+        <td><button id='answer'>提交</button></td>
+    </tr>
+    <tr>
+        <td><div id="result"></div></td>
+    </tr>
+    <tr>
+        <td><button id="humananswer">人工回答</button></td>
+    </tr>
+</table>
+</body>
+</html>

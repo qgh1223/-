@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>在线老年疾病咨询问答系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="UI" />
+    <meta name="author" content="周建超" />
+    <!-- css -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../static/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+    <link href="../static/css/flexslider.css" rel="stylesheet" />
+    <link href="../static/css/style.css" rel="stylesheet" />
+    <!-- 为搜索提问部分添加样式 searchstyle.css -->
+    <link href="../static/css/SearchStyle.css" rel="stylesheet"/>
+    <!-- 使用了标签选择器，内置再html中 -->
+    <style type="text/css">
+        .dialog
+        {
+            position:absolute;
+            top:1200px;
+            width: 1432px;
+            height:200px;
+            margin:auto;
+            box-shadow:2px 2px 4px rgb(171, 247, 181);
+            background-color:rgb(171, 247, 181);
+            border:solid 1px #aaa;
+            border-radius:4px;
+            overflow: hidden;
+            display: none;
+        }
+        .dialog title
+        {
+            text-align: center;
+            font-size:16px;
+            font-weight:bold;
+            color:#fff;
+            padding:6px;
+            background-color:#404040;
+        }
+        .dialog close
+        {
+            width:20px;
+            height:20px;
+            margin:3px;
+            float:right;
+            cursor:pointer;
+            color:#fff;
+
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrapper" class="home-page">
+    <!-- start header -->
+    <header>
+        <div class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html"><img src="img/logo.png" alt="logo"/></a>
+
+                </div>
+                <div class="navbar-collapse collapse ">
+                    <ul class="nav navbar-nav">
+
+                        <li class="active"><a href="index.html">首页</a></li>
+                        <li><a>关于我们</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+    <section id="banner">
+
+        <!-- Slider -->
+        <div id="main-slider" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <img src="../static/img/slides/2.jpg" alt="" />
+                    <div class="flex-caption container">
+                        <h3>在线老年疾病咨询问答系统</h3>
+
+                        <p>专注老年人常见疾病诊断</p>
+                        <p>关注健康 从我做起</p>
+                        <p>早发现 早治疗</p>
+
+                    </div>
+                </li>
+                <li>
+                    <img src="../static/img/slides/11.jpg" alt="" />
+                    <div class="flex-caption container">
+                        <h3>我们为您提供最好的诊断服务</h3>
+                        <p>输入包含相关疾病关键词问题</p>
+                        <P>我们将为你提供免费咨询答案</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- end slider -->
+
+    </section>
+    <section class="txt-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="aligncenter"><h1 class="aligncenter">我们能咨询哪些疾病</h1>输入其中包含五大类疾病的关键词，我们将提供治疗方式、传染疾病、常用药物、治愈率、症状、以及治疗费用周期等等。   </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="features">
+                    <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="0ms" style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 0ms;">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <img src="../static/img/1.png" alt="" />
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">代谢疾病</h4>
+                                <p>糖尿病、高血压、高血脂症</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="100ms" style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 100ms;">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <img src="../static/img/2.png" alt="" />
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">心脑血管疾病</h4>
+                                <p>冠心病、脑梗塞</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="200ms" style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 200ms;">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <img src="../static/img/3.png" alt="" />
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">消化系统疾病</h4>
+                                <p>过敏性结肠炎、疱疹性口腔炎、糜烂性胃炎、老年便秘、缺血性胃炎、胃窦炎、胆源性慢性胰岛炎</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="300ms" style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 300ms;">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <img src="../static/img/4.png" alt="" />
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">呼吸系统疾病</h4>
+                                <p>食管炎、陈旧性肺结核、气胸、放射性食管炎、泛细支气管炎、小细胞肺癌</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="400ms" style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 400ms;">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <img src="../static/img/5.png" alt="" />
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">流感疾病</h4>
+                                <p>老年流行性感冒、病毒性感冒</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 wow fadeInUp animated" data-wow-duration="300ms" data-wow-delay="500ms" style="visibility: visible; -webkit-animation-duration: 300ms; -webkit-animation-delay: 500ms;">
+                        <div class="media service-box">
+                            <div class="pull-left">
+                                <img src="../static/img/7.png" alt="" />
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">疑难杂症</h4>
+                                <p>老年骨质疏松症，痛风、寄生虫病</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end the first section -->
+
+
+    <section id="search" >
+        <div class="search_box">
+            <div style="text-align: center">
+                <label style="font-size: 34px">常见疾病咨询搜索提问</label>
+            </div>
+            <div id="Margin_control" style="height:20px"></div> <!--这边是为了加空白来调整间距 -->
+            <div>
+                <form method="POST" action="">
+                    <select>
+                        <option value="1">全部</option>
+                        <option value="2">呼吸道疾病</option>
+                        <option value="3">代谢疾病</option>
+                        <option value="4">心脑血管疾病</option>
+                        <option value="5">消化系统疾病</option>
+                    </select>
+
+                    <input style="width:1100px ;height:30px ; padding: 1px 2px; margin:0 5px; border:1px solid #619fcf" type="text" id="question" value="高血压病多少时间能好"/>
+                    <input style="width:110px; height:30px" type="button" id="submit" value="提交"/>
+                    <div class="search_tips">
+                        <!-- <h2>🔍提示</h2> -->
+                        <!-- <ul>
+                        <li><a href="#">高血压病多少时间能好</a></li>
+                        <li><a href="#">高血压治愈的时间多少</a></li>
+                        </ul> -->
+                    </div>
+            </div>
+            <div id="dlgTest" class="dialog">
+                <span class="close">&times;</span>
+                <div style="text-align:center " class="title">提 问 答 案 显 示</div>
+                <div class="content">高血压一般需要终身用药，疾病产生的因素很复杂。能不能治愈要看引起高血压一般需要终身用药，疾病的因素。因为其他疾病引起的高血压一般需要终身用药，疾病只要其他疾病痊愈，高血压一般需要终身用药，疾病也就随之好了。单纯的高血压一般需要终身用药，疾病一般也不易治愈，需要终身服药</div>
+            </div>
+
+            <div id="search_result" style="height:400px" ></div> <!-- 这边为对话框预留空白 -->
+            </form>
+        </div>
+    </section>
+
+    <!-- end the second section -->
+
+
+    <footer>
+    </footer>
+</div>
+<a href="#" class="scrollup"><i class="fa fa-angle-up active"></i></a>
+<!-- javascript
+    这部分用的模版================================================== -->
+<script src="../static/js/jquery.js"></script>
+<script src="../static/js/jquery.easing.1.3.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/jquery.fancybox.pack.js"></script>
+<script src="../static/js/jquery.fancybox-media.js"></script>
+<script src="../static/js/portfolio/jquery.quicksand.js"></script>
+<script src="../static/js/portfolio/setting.js"></script>
+<script src="../static/js/jquery.flexslider.js"></script>
+<script src="../static/js/animate.js"></script>
+<script src="../static/js/custom.js"></script>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- 以下添加对话框的功能 -->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#submit").click(function(){
+            //alert('hello')
+            //alert(question);
+            var question=$("#question").val();
+            $.get('/getanswer',{'question':question},function(ret){
+                print(ret)
+                $("#search_result").html(ret)
+            })
+        });
+    });
+    function Dialog(id)
+    {
+        this.id=id;
+        var that=this;
+        document.getElementById(id).children[0].onclick=function()
+        {
+
+
+        }
+    }
+    //定义一些Dialog的原型方法
+
+    //显示Dialog对话框
+    Dialog.prototype.show=function()
+    {
+
+    }
+    //关闭Dialog对话框
+    Dialog.prototype.close=function()
+    {
+        var dlg=document.getElementById(this.id);
+        dlg.style.display='none';
+        dlg=null;
+    }
+    //定义打开对话框的方法
+    function openDialog()
+    {
+        //var dlg=new Dialog('dlgTest');
+        //dlg.show();
+        alert('hello')
+        var question=$("#question").val();
+        $.get('/getanswer',{'question':question},function(ret){
+            $("#search_result").html(ret)
+        })
+    }
+</script>
+</body>
+</html>
